@@ -1,6 +1,6 @@
 <template>
   <div>
-    <parent></parent>
+    <parent p-child1="child1" p-child2="child2" placeholder="244t5364"></parent>
   </div>
 </template>
 

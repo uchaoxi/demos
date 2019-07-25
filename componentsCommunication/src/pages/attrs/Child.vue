@@ -1,9 +1,13 @@
 <template>
-  <input v-model="$attrs.childMsg" />
+  <div>
+    <p>{{$attrs}}</p>
+  </div>
+
 </template>
 
 <script>
 export default {
+  inheritAttrs: true,
   data () {
     return {
       msg: 'Child Hood'
