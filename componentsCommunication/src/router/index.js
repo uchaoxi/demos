@@ -5,6 +5,7 @@ import SyncParent from '@/pages/sync/Parent.vue'
 import BusParent from '@/pages/bus/Parent.vue'
 import ChildrenParent from '@/pages/children/Parent.vue'
 import AttrsGrand from '@/pages/attrs/Grand.vue'
+import ListenersGrand from '@/pages/listeners/Grand.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -15,26 +16,25 @@ export default new Router({
       component: HelloWorld,
       children: [{
         path: '/sync',
-        name: 'Parent',
         component: SyncParent
       },
       {
         path: '/bus',
-        name: 'Parent',
         component: BusParent
       },
       {
         path: '/children',
-        name: 'Parent',
         component: ChildrenParent
       },
       {
         path: '/attrs',
-        name: 'Parent',
         component: AttrsGrand
-      }]
-
+      },
+      {
+        path: '/listeners',
+        component: ListenersGrand
+      }
+      ]
     }
-
   ]
 })

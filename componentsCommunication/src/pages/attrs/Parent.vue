@@ -1,7 +1,8 @@
 <template>
   <div>
-    <child title="2355" name="hello"  v-bind="$attrs"></child>
-    <p>$attrs:{{$attrs}}</p>
+    <child :title="title" v-bind="$attrs"></child>
+    <p>parent see:{{$attrs}}</p>
+    <p>PROP:{{fortune}}</p>
   </div>
 </template>
 
@@ -9,9 +10,11 @@
 import Child from '@/pages/attrs/Child.vue'
 export default {
   inheritAttrs: true,
+  prop: ['fortune'],
   data () {
     return {
-      msg: 'Parent Heart'
+      name: 'Parent Heart',
+      title: 'Son of Tea lover'
     }
   },
   components: {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <parent p-child1="child1" p-child2="child2" placeholder="244t5364"></parent>
+    <parent :hobby="hobby" :fortune="fortune" title="Tea lover" ></parent>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ export default {
   data () {
     return {
       name: 'Grand Wall',
-      childMsg: '12345678'
+      hobby: 'Drinking Tea',
+      fortune: 'A Box of Tea'
     }
   },
   components: {

@@ -1,7 +1,8 @@
 <template>
   <div>
-    <p>child see:{{$attrs}}</p>
+    <p>{{msg}}</p>
   </div>
+
 </template>
 
 <script>
@@ -9,8 +10,11 @@ export default {
   inheritAttrs: true,
   data () {
     return {
-      name: 'Child Hood'
+      msg: 'Child Hood'
     }
+  },
+  mounted () {
+    this.$emit('test1')
   }
 }
 </script>
