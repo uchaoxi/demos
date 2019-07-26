@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import IndexView from '@/pages/index.vue'
 import SyncParent from '@/pages/sync/Parent.vue'
 import BusParent from '@/pages/bus/Parent.vue'
 import ChildrenParent from '@/pages/children/Parent.vue'
@@ -12,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
+      name: 'index',
+      component: IndexView,
       children: [{
         path: '/sync',
         component: SyncParent
