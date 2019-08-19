@@ -1,7 +1,7 @@
 <template>
   <div>
-    <child title="2355" name="hello"  v-on="$listeners"></child>
-    <p>{{msg}}</p>
+    <child  v-on="$listeners"></child>
+    <p>{{name}}</p>
   </div>
 </template>
 
@@ -11,13 +11,14 @@ export default {
   inheritAttrs: true,
   data () {
     return {
-      msg: 'Parent Heart'
+      name: 'Parent Heart'
     }
   },
   components: {
     Child
   },
   mounted () {
+    this.$emit('test1')
     this.$emit('test2')
   }
 }

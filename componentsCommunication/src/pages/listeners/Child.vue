@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{msg}}</p>
+    <p>{{name}}</p>
   </div>
 
 </template>
@@ -10,11 +10,11 @@ export default {
   inheritAttrs: true,
   data () {
     return {
-      msg: 'Child Hood'
+      name: 'Child Hood'
     }
   },
   mounted () {
-    this.$emit('test1')
+    this.$emit('test3')
   }
 }
 </script>

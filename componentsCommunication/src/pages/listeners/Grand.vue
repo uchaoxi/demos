@@ -1,6 +1,6 @@
 <template>
   <div>
-    <parent p-child1="child1" p-child2="child2" placeholder="244t5364" v-on:test1="test1" v-on:test2="test2"></parent>
+    <parent  v-on:test1="test1" v-on:test2="test2" v-on:test3="test3"></parent>
   </div>
 </template>
 
@@ -9,8 +9,7 @@ import Parent from '@/pages/listeners/Parent.vue'
 export default {
   data () {
     return {
-      name: 'Grand Wall',
-      childMsg: '12345678'
+      name: 'Grand Wall'
     }
   },
   components: {
@@ -18,9 +17,12 @@ export default {
   },
   methods: {
     test1 () {
-      console.log('from parent')
+      console.log('from parent first')
     },
     test2 () {
+      console.log('from parent second')
+    },
+    test3 () {
       console.log('from child')
     }
   }
