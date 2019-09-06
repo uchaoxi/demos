@@ -1,6 +1,6 @@
 <template>
   <div>
-    <child  v-on="$listeners"></child>
+    <child  v-on="$listeners" @test3="handSelf"></child>
     <p>{{name}}</p>
   </div>
 </template>
@@ -20,6 +20,11 @@ export default {
   mounted () {
     this.$emit('test1')
     this.$emit('test2')
+  },
+  methods: {
+    handSelf () {
+      console.log('get msg from son')
+    }
   }
 }
 </script>
